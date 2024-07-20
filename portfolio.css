@@ -693,88 +693,233 @@ col.fixed-width {
 }
 
 To make your portfolio website more responsive and well-suited for Android devices, you’ll need to ensure that your CSS handles various screen sizes effectively. This involves using media queries to adapt the layout and design for smaller screens. Here's a set of CSS rules specifically targeting Android devices, but they should work for most mobile devices:
+/* Mobile view adjustments */
 
-```css
 /* General mobile styling adjustments */
 @media (max-width: 768px) {
     html, body {
         font-size: 14px; /* Adjust base font size for better readability on mobile */
+        line-height: 1.5;
     }
 
+    /* Greet section */
     .greet {
-        padding: 30px 0; /* Adjust padding for smaller screens */
+        padding: 30px 10px; /* Adjust padding for mobile */
     }
 
     .circle-image {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
 
     .greetc {
-        font-size: 24px; /* Smaller font size for mobile */
+        font-size: 24px; /* Adjust font size for mobile */
     }
 
+    /* Navigation bar */
     .navbar {
-        padding: 10px 20px; /* Adjust padding */
-        border: none; /* Remove border on mobile */
-        box-shadow: none; /* Remove shadow on mobile */
+        padding: 10px 15px; /* Adjust padding */
+        border: none; /* Remove border */
+        box-shadow: none; /* Remove shadow */
+    }
+
+    .nav-list {
+        flex-direction: column; /* Stack nav items vertically */
     }
 
     .nav-item {
-        margin: 0 10px; /* Reduce margin for smaller screens */
+        margin: 10px 0; /* Adjust margin */
     }
 
     .nav-item a {
         font-size: 16px; /* Adjust font size */
-        padding: 8px 15px; /* Adjust padding */
+        padding: 8px 10px; /* Adjust padding */
     }
 
+    /* Animation container */
     .animation-container {
-        font-size: 24px; /* Smaller font size for mobile */
-        padding: 0 20px; /* Adjust padding */
+        font-size: 20px; /* Smaller font size for mobile */
+        padding: 0 10px; /* Adjust padding */
     }
 
+    /* Table */
     .table-container {
         overflow-x: auto; /* Allow horizontal scrolling for tables */
     }
 
     table {
         width: 100%; /* Make table responsive */
+        border-collapse: collapse; /* Ensure border collapses */
     }
 
-    .about-education, .skills, .interests, .internships, .certificates, .resume-section, .projects {
+    th, td {
+        padding: 10px; /* Adjust padding for table cells */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* About Me and Education section */
+    .about-education {
+        flex-direction: column; /* Stack cards vertically */
         padding: 20px; /* Adjust padding */
     }
 
-    .about-card, .education-card, .skill-card, .interest-card, .internships-card, .certificates-card {
+    .about-card, .education-card {
         width: 100%; /* Full width for cards on mobile */
         box-shadow: none; /* Remove box-shadow */
+        margin-bottom: 20px; /* Space between cards */
     }
 
-    .interest-card img.icon, .skill-card i.material-icons, .internships-card i.material-icons, .certificates-card i.material-icons {
+    .about-card h2, .education-card h2 {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .about-card p, .education-card p {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* Interests section */
+    .interests {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .interests h2 {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    .interests-grid {
+        flex-direction: column; /* Stack interest cards vertically */
+    }
+
+    .interest-card {
+        width: 100%; /* Full width for interest cards */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .interest-card img.icon {
         width: 40px; /* Adjust icon size */
         height: 40px; /* Adjust icon size */
     }
 
-    .contact-form {
+    /* Skills section */
+    .skills {
         padding: 20px; /* Adjust padding */
     }
 
-    .contact-item {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to start */
+    .skills h2 {
+        font-size: 24px; /* Adjust font size */
     }
 
-    .contact-item p {
-        margin: 5px 0; /* Adjust margins */
+    .skills-grid {
+        flex-direction: column; /* Stack skill cards vertically */
     }
 
-    .download-btn {
-        padding: 8px 15px; /* Adjust padding */
+    .skill-card {
+        width: 100%; /* Full width for skill cards */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .skill-card i.material-icons {
+        font-size: 30px; /* Adjust icon size */
+    }
+
+    .skill-card h3 {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .skill-card p {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    /* Internships section */
+    .internships {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .internships h2 {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    .internships-grid {
+        flex-direction: column; /* Stack internship cards vertically */
+    }
+
+    .internships-card {
+        width: 100%; /* Full width for internship cards */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .internships-card i.material-icons {
+        font-size: 30px; /* Adjust icon size */
+    }
+
+    .internships-card h3 {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .internships-card p {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    /* Certificates section */
+    .certificates {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .certificates h2 {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    .certificates-grid {
+        flex-direction: column; /* Stack certificate cards vertically */
+    }
+
+    .certificates-card {
+        width: 100%; /* Full width for certificate cards */
+        margin-bottom: 20px; /* Space between cards */
+    }
+
+    .certificates-card i.material-icons {
+        font-size: 30px; /* Adjust icon size */
+    }
+
+    .certificates-card h3 {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .certificates-card p {
+        font-size: 12px; /* Adjust font size */
+    }
+
+    /* Resume section */
+    .resume-section {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .resume-section h2 {
+        font-size: 24px; /* Adjust font size */
     }
 
     .resume-section iframe {
         width: 100%; /* Full width for iframe */
         height: auto; /* Adjust height */
+        margin-bottom: 20px; /* Space below iframe */
+    }
+
+    .download-btn {
+        padding: 8px 15px; /* Adjust padding */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* Projects section */
+    .projects {
+        padding: 20px; /* Adjust padding */
+    }
+
+    .projects h2 {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    .projects p {
+        font-size: 14px; /* Adjust font size */
     }
 }
