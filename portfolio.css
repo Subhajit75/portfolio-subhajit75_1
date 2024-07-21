@@ -20,12 +20,15 @@ html, body {
 }
 
 .circle-image {
-    width: 205px;
-    height: 205px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s, box-shadow 0.5s;
 }
+
 
 .circle-image img {
     width: 100%;
