@@ -61,7 +61,6 @@ html, body {
 }
 
 
-
 /* Navigation bar styling */
 .navbar {
     background-color: #ddcab2;
@@ -679,7 +678,247 @@ col.fixed-width {
 
 
 
-.projects {
+.projects {/* Basic Reset */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 20px 30px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.3s;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.nav-item a:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff8a00, #da1d81);
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* About Section */
+.about {
+    padding: 60px 20px;
+    background: #f7f7f7;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-card h2 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.about-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.portfolio-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.overlay h3, .overlay p {
+    margin: 0;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 20px;
+    background: #f7f7f7;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
     text-align: center;
     padding: 40px 20px;
     background-color: #ddd0b3;
@@ -699,236 +938,4 @@ col.fixed-width {
     margin-top: 20px;
     line-height: 1.6;
     color: #333;
-}
-
-To make your portfolio website more responsive and well-suited for Android devices, you’ll need to ensure that your CSS handles various screen sizes effectively. This involves using media queries to adapt the layout and design for smaller screens. Here's a set of CSS rules specifically targeting Android devices, but they should work for most mobile devices:
-/* Mobile view adjustments */
-
-/* General mobile styling adjustments */
-@media (max-width: 768px) {
-    html, body {
-        font-size: 14px; /* Adjust base font size for better readability on mobile */
-        line-height: 1.5;
-    }
-
-    /* Greet section */
-    .greet {
-        padding: 30px 10px; /* Adjust padding for mobile */
-    }
-
-    .circle-image {
-        width: 120px;
-        height: 120px;
-    }
-
-    .greetc {
-        font-size: 24px; /* Adjust font size for mobile */
-    }
-
-    /* Navigation bar */
-    .navbar {
-        padding: 10px 15px; /* Adjust padding */
-        border: none; /* Remove border */
-        box-shadow: none; /* Remove shadow */
-    }
-
-    .nav-list {
-        flex-direction: column; /* Stack nav items vertically */
-    }
-
-    .nav-item {
-        margin: 10px 0; /* Adjust margin */
-    }
-
-    .nav-item a {
-        font-size: 16px; /* Adjust font size */
-        padding: 8px 10px; /* Adjust padding */
-    }
-
-    /* Animation container */
-    .animation-container {
-        font-size: 20px; /* Smaller font size for mobile */
-        padding: 0 10px; /* Adjust padding */
-    }
-
-    /* Table */
-    .table-container {
-        overflow-x: auto; /* Allow horizontal scrolling for tables */
-    }
-
-    table {
-        width: 100%; /* Make table responsive */
-        border-collapse: collapse; /* Ensure border collapses */
-    }
-
-    th, td {
-        padding: 10px; /* Adjust padding for table cells */
-        font-size: 14px; /* Adjust font size */
-    }
-
-    /* About Me and Education section */
-    .about-education {
-        flex-direction: column; /* Stack cards vertically */
-        padding: 20px; /* Adjust padding */
-    }
-
-    .about-card, .education-card {
-        width: 100%; /* Full width for cards on mobile */
-        box-shadow: none; /* Remove box-shadow */
-        margin-bottom: 20px; /* Space between cards */
-    }
-
-    .about-card h2, .education-card h2 {
-        font-size: 20px; /* Adjust font size */
-    }
-
-    .about-card p, .education-card p {
-        font-size: 14px; /* Adjust font size */
-    }
-
-    /* Interests section */
-    .interests {
-        padding: 20px; /* Adjust padding */
-    }
-
-    .interests h2 {
-        font-size: 24px; /* Adjust font size */
-    }
-
-    .interests-grid {
-        flex-direction: column; /* Stack interest cards vertically */
-    }
-
-    .interest-card {
-        width: 100%; /* Full width for interest cards */
-        margin-bottom: 20px; /* Space between cards */
-    }
-
-    .interest-card img.icon {
-        width: 40px; /* Adjust icon size */
-        height: 40px; /* Adjust icon size */
-    }
-
-    /* Skills section */
-    .skills {
-        padding: 20px; /* Adjust padding */
-    }
-
-    .skills h2 {
-        font-size: 24px; /* Adjust font size */
-    }
-
-    .skills-grid {
-        flex-direction: column; /* Stack skill cards vertically */
-    }
-
-    .skill-card {
-        width: 100%; /* Full width for skill cards */
-        margin-bottom: 20px; /* Space between cards */
-    }
-
-    .skill-card i.material-icons {
-        font-size: 30px; /* Adjust icon size */
-    }
-
-    .skill-card h3 {
-        font-size: 18px; /* Adjust font size */
-    }
-
-    .skill-card p {
-        font-size: 12px; /* Adjust font size */
-    }
-
-    /* Internships section */
-    .internships {
-        padding: 20px; /* Adjust padding */
-    }
-
-    .internships h2 {
-        font-size: 24px; /* Adjust font size */
-    }
-
-    .internships-grid {
-        flex-direction: column; /* Stack internship cards vertically */
-    }
-
-    .internships-card {
-        width: 100%; /* Full width for internship cards */
-        margin-bottom: 20px; /* Space between cards */
-    }
-
-    .internships-card i.material-icons {
-        font-size: 30px; /* Adjust icon size */
-    }
-
-    .internships-card h3 {
-        font-size: 20px; /* Adjust font size */
-    }
-
-    .internships-card p {
-        font-size: 12px; /* Adjust font size */
-    }
-
-    /* Certificates section */
-    .certificates {
-        padding: 20px; /* Adjust padding */
-    }
-
-    .certificates h2 {
-        font-size: 24px; /* Adjust font size */
-    }
-
-    .certificates-grid {
-        flex-direction: column; /* Stack certificate cards vertically */
-    }
-
-    .certificates-card {
-        width: 100%; /* Full width for certificate cards */
-        margin-bottom: 20px; /* Space between cards */
-    }
-
-    .certificates-card i.material-icons {
-        font-size: 30px; /* Adjust icon size */
-    }
-
-    .certificates-card h3 {
-        font-size: 20px; /* Adjust font size */
-    }
-
-    .certificates-card p {
-        font-size: 12px; /* Adjust font size */
-    }
-
-    /* Resume section */
-    .resume-section {
-        padding: 20px; /* Adjust padding */
-    }
-
-    .resume-section h2 {
-        font-size: 24px; /* Adjust font size */
-    }
-
-    .resume-section iframe {
-        width: 100%; /* Full width for iframe */
-        height: auto; /* Adjust height */
-        margin-bottom: 20px; /* Space below iframe */
-    }
-
-    .download-btn {
-        padding: 8px 15px; /* Adjust padding */
-        font-size: 14px; /* Adjust font size */
-    }
-
-    /* Projects section */
-    .projects {
-        padding: 20px; /* Adjust padding */
-    }
-
-    .projects h2 {
-        font-size: 24px; /* Adjust font size */
-    }
-
-    .projects p {
-        font-size: 14px; /* Adjust font size */
-    }
 }
