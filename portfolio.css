@@ -678,12 +678,86 @@ col.fixed-width {
 
 
 
-.projects {/* Basic Reset */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+
+.projects {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ddd0b3;
+}
+
+.projects h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
     color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projects-card {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px #cbcbcb,
+                -10px -10px 20px #ffffff;
+    padding: 20px;
+    width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 30px #b0b0b0,
+                -10px -10px 30px #ffffff;
+}
+
+.projects-card i.material-icons {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.projects-card h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.projects-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.projects-card:before {
+    content: '';
+    position: absolute;
+    top: -75px;
+    left: -75px;
+    width: 150px;
+    height: 150px;
+    background: rgba(0, 255, 0, 0.1); /* Change background color here */
+    border-radius: 50%;
+    z-index: 0;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.projects-card:hover:before {
+    width: 200px;
+    height: 200px;
+}
+
+.projects-card * {
+    position: relative;
+    z-index: 1;
 }
 
 header {
