@@ -1014,3 +1014,88 @@ footer p {
     line-height: 1.6;
     color: #333;
 }
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    /* Adjust the body padding */
+    body {
+        padding: 10px;
+    }
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    /* Greet section */
+    .greet {
+        padding: 30px 0;
+    }
+
+    .circle-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .greetc {
+        font-size: 24px;
+    }
+
+    /* About Me and Education cards */
+    .about-card, .education-card, .interest-card, .skill-card, .internships-card, .certificates-card, .courses-card, .projects-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Table */
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    /* Hero Section */
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    /* Portfolio grid */
+    .portfolio-grid {
+        flex-direction: column;
+    }
+
+    .portfolio-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Contact form */
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-form input, .contact-form textarea {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 14px;
+    }
+}
