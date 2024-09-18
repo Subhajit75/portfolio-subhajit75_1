@@ -1094,8 +1094,15 @@ footer p {
         font-size: 14px;
     }
 
-    /* Footer */
+   /* Footer Mobile View */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 10px; /* Reduce padding for smaller screens */
+        text-align: center; /* Center align text */
+    }
+
     footer p {
-        font-size: 14px;
+        font-size: 12px; /* Reduce font size for readability on smaller screens */
+        margin: 10px 0; /* Add some margin for spacing */
     }
 }
