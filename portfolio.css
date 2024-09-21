@@ -636,31 +636,28 @@ col.fixed-width {
 
 /* Resume section styling */
 /* Mobile view for Resume section */
+/* Mobile view for Resume section */
 @media (max-width: 768px) {
     .resume-section {
-        padding: 20px 10px; /* Reduce padding for mobile */
+        padding: 20px 10px; /* Reduced padding for smaller screens */
     }
 
     .resume-section h2 {
-        font-size: 22px; /* Smaller heading size for mobile */
-        margin-bottom: 20px;
+        font-size: 22px; /* Smaller font size for headings */
+        margin-bottom: 20px; /* Space between heading and content */
     }
 
     .resume-section iframe {
-        width: 100%; /* Ensure iframe takes full width on mobile */
-        height: 400px; /* Adjust height for mobile */
-        border-radius: 5px;
+        width: 100%; /* Full width of mobile screen */
+        height: 400px; /* Adjust height to fit mobile screen size */
+        border: none; /* Clean look, no borders */
     }
 
     .download-resume {
-        margin-top: 15px; /* Adjust spacing */
-    }
-
-    .download-btn {
-        padding: 8px 15px; /* Slightly smaller button for mobile */
-        font-size: 14px; /* Smaller font size */
+        display: none; /* Hide the download button on mobile view */
     }
 }
+
 
 
 
