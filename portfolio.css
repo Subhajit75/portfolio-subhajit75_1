@@ -635,31 +635,45 @@ col.fixed-width {
 
 
 /* Resume section styling */
-/* Mobile view for Resume section */
-@media (max-width: 768px) {
-    .resume-section {
-        padding: 20px 10px; /* Reduce padding for mobile */
-    }
+.resume-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #dcd1ba;
+    color: #000;
+}
 
-    .resume-section h2 {
-        font-size: 22px; /* Smaller heading size for mobile */
-        margin-bottom: 20px;
-    }
+.resume-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
 
-    .resume-section iframe {
-        width: 100%; /* Ensure iframe takes full width on mobile */
-        height: 400px; /* Adjust height for mobile */
-        border-radius: 5px;
-    }
+.resume-section iframe {
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
 
-    .download-resume {
-        margin-top: 15px; /* Adjust spacing */
-    }
+.download-resume {
+    margin-top: 20px;
+}
 
-    .download-btn {
-        padding: 8px 15px; /* Slightly smaller button for mobile */
-        font-size: 14px; /* Smaller font size */
-    }
+.download-btn {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    background-color: #ddd0b3;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #f4f4f4;
+    transform: scale(1.05);
 }
 
 
